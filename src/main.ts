@@ -1,4 +1,5 @@
 import './style.css'
+import { businessImages, productImages, workshopVideos } from './media'
 
 const app = document.querySelector<HTMLDivElement>('#app')
 
@@ -92,47 +93,61 @@ app.innerHTML = `
             <div class="service-number">01</div>
             <div class="service-symbol">⌁</div>
             <h3>MECÁNICA INTEGRAL</h3>
-            <p>Atención mecánica general para motos y cuatriciclos. Revisión de funcionamiento, evaluación de componentes y trabajos de mantenimiento y reparación según las necesidades de cada vehículo.</p>
+            <p class="service-question">¿Tu moto hace ruidos extraños, pierde potencia o presenta vibraciones?</p>
+            <p>Realizamos revisiones del motor, transmisión, componentes mecánicos y funcionamiento general. Detectamos ruidos, pérdida de potencia, vibraciones, pérdidas y desgastes. Evaluamos cada caso para determinar qué reparación necesita tu moto o cuatriciclo y evitar que una falla pequeña termine en un problema mayor.</p>
             <span class="service-tag">MOTOS · CUATRICICLOS</span>
           </article>
           <article class="service-card">
             <div class="service-number">02</div>
             <div class="service-symbol">⌕</div>
             <h3>DIAGNÓSTICO DE FALLAS</h3>
-            <p>Evaluación de problemas de funcionamiento para identificar posibles causas y orientar el trabajo de reparación. Un buen diagnóstico es el primer paso para encontrar la solución adecuada.</p>
+            <p class="service-question">¿Tu moto falla, se apaga o tiene problemas para arrancar?</p>
+            <p>Investigamos fallas de arranque, funcionamiento irregular, pérdida de rendimiento, ruidos y problemas intermitentes. Revisamos los sistemas involucrados para localizar el origen del inconveniente y evitar reemplazar componentes innecesariamente.</p>
             <span class="service-tag">DETECCIÓN Y EVALUACIÓN</span>
           </article>
           <article class="service-card">
             <div class="service-number">03</div>
             <div class="service-symbol">ϟ</div>
             <h3>INYECCIÓN ELECTRÓNICA</h3>
-            <p>Diagnóstico y atención de sistemas de inyección electrónica. Revisión de fallas y funcionamiento del sistema para recuperar una respuesta correcta del motor.</p>
+            <p class="service-question">¿Sentís tironeos, consumo irregular o pérdida de rendimiento?</p>
+            <p>Revisamos el funcionamiento del sistema de alimentación electrónica, sensores y componentes relacionados. Buscamos detectar fallas que provoquen tironeos, dificultades de arranque, consumo irregular o pérdida de potencia. Un diagnóstico adecuado permite orientar la reparación y recuperar el funcionamiento del motor.</p>
             <span class="service-tag">SISTEMAS ELECTRÓNICOS</span>
           </article>
-          <article class="service-card">
+          <article class="service-card service-electric">
             <div class="service-number">04</div>
-            <div class="service-symbol">⚙</div>
-            <h3>CARBURADORES</h3>
-            <p>Revisión, limpieza, regulación y atención de problemas relacionados con el carburador. Un sistema correctamente ajustado contribuye al funcionamiento y rendimiento del motor.</p>
-            <span class="service-tag">ALIMENTACIÓN DEL MOTOR</span>
+            <div class="service-symbol">ϟ</div>
+            <h3>ELECTRICIDAD DE MOTOS</h3>
+            <p class="service-question">¿Tu moto no arranca? ¿Se descarga la batería? ¿Fallan las luces?</p>
+            <p>Diagnóstico y reparación de fallas eléctricas. Revisamos batería, sistema de carga, regulador, estator, arranque, encendido, iluminación, cables, fichas y conexiones. Buscamos el origen de cada falla para evitar cambios de piezas innecesarios y recuperar el funcionamiento eléctrico.</p>
+            <span class="service-tag">ESPECIALIDAD · SISTEMA ELÉCTRICO</span>
           </article>
           <article class="service-card">
             <div class="service-number">05</div>
-            <div class="service-symbol">◷</div>
-            <h3>SERVICE Y MANTENIMIENTO</h3>
-            <p>Mantenimiento preventivo y revisión general para cuidar el estado del vehículo, detectar posibles inconvenientes y ayudar a evitar desgastes o fallas mayores.</p>
-            <span class="service-tag">CUIDADO Y PREVENCIÓN</span>
+            <div class="service-symbol">⚙</div>
+            <h3>CARBURADORES</h3>
+            <p class="service-question">¿Le cuesta arrancar, regula mal o consume demasiado?</p>
+            <p>Realizamos revisión, limpieza y regulación del carburador. Controlamos los componentes de alimentación para detectar obstrucciones, suciedad y desajustes que pueden provocar dificultades de arranque, ralentí inestable, tironeos o consumo excesivo.</p>
+            <span class="service-tag">ALIMENTACIÓN DEL MOTOR</span>
           </article>
           <article class="service-card">
             <div class="service-number">06</div>
+            <div class="service-symbol">◷</div>
+            <h3>SERVICE Y MANTENIMIENTO</h3>
+            <p class="service-question">¿Querés cuidar tu moto y evitar reparaciones innecesarias?</p>
+            <p>Realizamos controles periódicos, cambio de aceite, revisión de filtros, bujías, cadena, transmisión, frenos, neumáticos y niveles. El mantenimiento preventivo ayuda a reducir desgastes prematuros, conservar el rendimiento y detectar problemas antes de que se agraven.</p>
+            <span class="service-tag">CUIDADO Y PREVENCIÓN</span>
+          </article>
+          <article class="service-card">
+            <div class="service-number">07</div>
             <div class="service-symbol">＋</div>
             <h3>REVISIÓN Y PUESTA A PUNTO</h3>
-            <p>Control del funcionamiento general y evaluación de los puntos que necesitan atención. Cada trabajo se considera de acuerdo con el estado y las características del vehículo.</p>
+            <p class="service-question">¿Estás por viajar? ¿Querés salir a la ruta con tranquilidad?</p>
+            <p>Inspeccionamos los principales sistemas de la moto, verificamos su funcionamiento y detectamos componentes que necesitan ajuste, mantenimiento o reparación. Una puesta a punto permite corregir irregularidades y preparar el vehículo para un uso confiable.</p>
             <span class="service-tag">ATENCIÓN PERSONALIZADA</span>
           </article>
         </div>
         <div class="workshop-cta">
-          <div><strong>¿Tu moto necesita atención?</strong><span>Consultanos y contanos qué problema presenta.</span></div>
+          <div><strong>¿QUERÉS SALIR A LA RUTA CON TRANQUILIDAD?</strong><span>No esperes a quedarte tirado. Anticipate a los problemas. Tu seguridad también importa.</span></div>
           <a class="btn btn-green" href="https://wa.me/5491131788680" target="_blank" rel="noopener noreferrer">HACÉ TU CONSULTA <span>↗</span></a>
         </div>
       </section>
@@ -168,19 +183,27 @@ app.innerHTML = `
       </section>
 
       <section class="gallery section-pad" id="galeria">
-        <div class="section-kicker">GALERÍA</div>
-        <div class="gallery-heading">
-          <h2>EL TRABAJO<br><span>HABLA POR SÍ SOLO.</span></h2>
-          <p>Próximamente vas a poder conocer nuestros trabajos, el taller, los vehículos y mucho más.</p>
-        </div>
-        <div class="gallery-placeholder">
-          <div class="gallery-cross">＋</div>
-          <span>DDM RACING TEAM</span>
-          <strong>ACÁ VAMOS A MOSTRAR<br>NUESTROS TRABAJOS.</strong>
-          <p>Galería de fotos y videos reales del taller.</p>
-          <div class="gallery-status"><i></i> CONTENIDO EN PREPARACIÓN</div>
-        </div>
-      </section>
+  <div class="section-kicker">DDM RACING TEAM · GALERÍA</div>
+  <div class="gallery-heading"><h2>EL TRABAJO<br><span>HABLA POR SÍ SOLO.</span></h2><p>Conocé nuestro negocio, los productos y los trabajos reales del equipo.</p></div>
+  <div class="media-section">
+    <div class="media-heading"><span>01 / NUESTRO ESPACIO</span><h3>CONOCÉ <em>EL NEGOCIO.</em></h3><p>Conocé nuestro lugar de trabajo y la pasión que ponemos en cada proyecto.</p></div>
+    <div class="media-grid business-grid">
+      ${businessImages.map((src,i) => `<figure class="media-card"><img src="${src}" alt="DDM Racing Team - negocio ${i+1}" loading="lazy" data-lightbox><figcaption>DDM RACING TEAM · ${String(i+1).padStart(2,"0")}</figcaption></figure>`).join("")}
+    </div>
+  </div>
+  <div class="media-section" id="catalogo">
+    <div class="media-heading"><span>02 / REPUESTOS Y ACCESORIOS</span><h3>PRODUCTOS <em>DDM.</em></h3><p>Consultanos por disponibilidad, precio y compatibilidad con tu moto o cuatriciclo.</p><a class="btn btn-green" href="https://wa.me/5491178389464" target="_blank" rel="noopener noreferrer">CONSULTAR POR REPUESTOS <span>↗</span></a></div>
+    <div class="media-grid products-grid">
+      ${productImages.map((src,i) => `<figure class="media-card product-card"><img src="${src}" alt="Producto DDM ${i+1}" loading="lazy" data-lightbox><figcaption>PRODUCTO · ${String(i+1).padStart(2,"0")}</figcaption></figure>`).join("")}
+    </div>
+  </div>
+  <div class="media-section" id="trabajos">
+    <div class="media-heading"><span>03 / TALLER EN ACCIÓN</span><h3>ACÁ VAMOS A MOSTRAR NUESTROS TRABAJOS.</h3><p>Galería de fotos y videos reales del taller.</p></div>
+    <div class="video-grid">
+      ${workshopVideos.map((src,i) => `<article class="video-card"><video controls preload="metadata" playsinline><source src="${src}" type="video/mp4">Tu navegador no puede reproducir este video.</video><span>DDM RACING TEAM · VIDEO ${String(i+1).padStart(2,"0")}</span></article>`).join("")}
+    </div>
+  </div>
+</section>
 
       <section class="social-band">
         <div>
@@ -203,7 +226,7 @@ app.innerHTML = `
           </div>
           <div class="contact-details">
             <div class="contact-detail"><span>DIRECCIÓN</span><strong>José C. Paz y Diógenes Taborda</strong><p>Parque Patricios · Ciudad Autónoma de Buenos Aires</p><a href="https://www.google.com/maps/search/?api=1&query=Jose+C.+Paz+y+Diogenes+Taborda+Parque+Patricios+CABA" target="_blank" rel="noreferrer">CÓMO LLEGAR ↗</a></div>
-            <div class="contact-detail"><span>HORARIOS DE ATENCIÓN</span><strong>Lunes a sábado</strong><p>09:00 a 22:00 hs</p><strong>Domingos y feriados</strong><p>11:00 a 20:00 hs</p></div>
+            <div class="contact-detail"><span>HORARIOS DE ATENCIÓN</span><strong>Lunes a sábado</strong><p>09:00 a 22:00 hs</p><strong>Domingos y feriados</strong><p>12:00 a 20:00 hs</p></div>
             <div class="contact-detail"><span>RESPONSABLE</span><strong>Darío Dávalos</strong></div>
           </div>
         </div>
@@ -223,6 +246,36 @@ app.innerHTML = `
     </a>
   </div>
 `
+
+const lightbox = document.createElement('div')
+lightbox.className = 'ddm-lightbox'
+lightbox.innerHTML = '<button class="lightbox-close" aria-label="Cerrar">×</button><img alt="Imagen ampliada">'
+document.body.appendChild(lightbox)
+const lightboxImage = lightbox.querySelector('img') as HTMLImageElement
+
+document.addEventListener('click', (event: MouseEvent) => {
+  const target = event.target
+  if (!(target instanceof Element)) return
+
+  const img = target.closest('img[data-lightbox]')
+  if (img instanceof HTMLImageElement) {
+    lightboxImage.src = img.src
+    lightboxImage.alt = img.alt
+    lightbox.classList.add('lightbox-open')
+  }
+
+  if (target === lightbox || target.closest('.lightbox-close')) {
+    lightbox.classList.remove('lightbox-open')
+    lightboxImage.src = ''
+  }
+})
+
+document.addEventListener('keydown', (event: KeyboardEvent) => {
+  if (event.key === 'Escape') {
+    lightbox.classList.remove('lightbox-open')
+    lightboxImage.src = ''
+  }
+})
 
 const menuToggle = document.querySelector<HTMLButtonElement>('.menu-toggle')
 const nav = document.querySelector<HTMLElement>('.nav')
@@ -248,7 +301,7 @@ const revealObserver = new IntersectionObserver((entries) => {
   })
 }, { threshold: 0.12 })
 
-document.querySelectorAll('.service-card, .part-item, .gallery-placeholder, .intro-grid, .section-heading, .parts-heading, .gallery-heading, .contact-grid').forEach((element) => {
+document.querySelectorAll('.service-card, .part-item, .media-card, .video-card, .gallery-placeholder, .intro-grid, .section-heading, .parts-heading, .gallery-heading, .contact-grid').forEach((element) => {
   element.classList.add('reveal')
   revealObserver.observe(element)
 })
